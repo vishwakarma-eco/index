@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Abhishek Vishwakarma - Builder, Visionary, Revolution Through Technology. A journey from village dreams to digital destiny.">
+    <title>The Revolution Within | Abhishek Vishwakarma</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- SVG Definitions -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <defs>
+            <!-- Home Icon -->
+            <symbol id="icon-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" />
+            </symbol>
+            <!-- Story Icon -->
+            <symbol id="icon-story" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+            </symbol>
+            <!-- Brain/Mind Icon -->
+            <symbol id="icon-mind" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                    d="M12 2a4 4 0 0 0-4 4v1a4 4 0 0 0-2 7c0 1.7.5 3.5 2 5 1.5 1.5 3 2 5 2s3.5-.5 5-2c1.5-1.5 2-3.3 2-5a4 4 0 0 0-2-7V6a4 4 0 0 0-4-4z" />
+                <path d="M12 2v20" />
+                <path d="M8 8h8" />
+                <path d="M8 12h8" />
+            </symbol>
+            <!-- Build/Hammer Icon -->
+            <symbol id="icon-build" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+            </symbol>
+            <!-- Connect/Link Icon -->
+            <symbol id="icon-connect" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+            </symbol>
+            <!-- Builder Icon -->
+            <symbol id="icon-builder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="6" width="20" height="12" rx="2" />
+                <path d="M12 12h.01" />
+                <path d="M17 12h.01" />
+                <path d="M7 12h.01" />
+            </symbol>
+            <!-- Dreamer/Star Icon -->
+            <symbol id="icon-dreamer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </symbol>
+            <!-- Observer/Eye Icon -->
+            <symbol id="icon-observer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                <circle cx="12" cy="12" r="3" />
+            </symbol>
+            <!-- GitHub Icon -->
+            <symbol id="icon-github" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+            </symbol>
+            <!-- LinkedIn Icon -->
+            <symbol id="icon-linkedin" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </symbol>
+            <!-- Email Icon -->
+            <symbol id="icon-email" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+            </symbol>
+            <!-- Peace/Dove Icon (Gandhi) -->
+            <symbol id="icon-peace" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="12" y1="2" x2="12" y2="22" />
+                <path d="M12 12L5 19" />
+                <path d="M12 12L19 19" />
+            </symbol>
+            <!-- Atom Icon (Einstein) -->
+            <symbol id="icon-atom" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="2" />
+                <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(45 12 12)" />
+                <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(-45 12 12)" />
+                <ellipse cx="12" cy="12" rx="10" ry="4" />
+            </symbol>
+            <!-- Heart Icon (Father) -->
+            <symbol id="icon-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </symbol>
+            <!-- Pray/Hope Icon (Mother) -->
+            <symbol id="icon-hope" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                <path d="M2 17l10 5 10-5" />
+                <path d="M2 12l10 5 10-5" />
+            </symbol>
+            <!-- Code Icon -->
+            <symbol id="icon-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6" />
+                <polyline points="8 6 2 12 8 18" />
+            </symbol>
+            <!-- AI Brain Icon -->
+            <symbol id="icon-ai" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2a4 4 0 0 1 4 4c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2a4 4 0 0 1 4-4z" />
+                <path d="M9 8v2" />
+                <path d="M15 8v2" />
+                <path d="M12 10v12" />
+                <path d="M8 14h8" />
+                <path d="M7 18h10" />
+            </symbol>
+            <!-- Search Icon -->
+            <symbol id="icon-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </symbol>
+            <!-- Shield Icon -->
+            <symbol id="icon-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </symbol>
+            <!-- Server/OS Icon -->
+            <symbol id="icon-server" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
+                <rect x="2" y="14" width="20" height="8" rx="2" ry="2" />
+                <line x1="6" y1="6" x2="6.01" y2="6" />
+                <line x1="6" y1="18" x2="6.01" y2="18" />
+            </symbol>
+            <!-- Robot Icon -->
+            <symbol id="icon-robot" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="10" rx="2" />
+                <circle cx="12" cy="5" r="2" />
+                <path d="M12 7v4" />
+                <line x1="8" y1="16" x2="8" y2="16" />
+                <line x1="16" y1="16" x2="16" y2="16" />
+            </symbol>
+            <!-- Arrow Down -->
+            <symbol id="icon-arrow-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <polyline points="19 12 12 19 5 12" />
+            </symbol>
+            <!-- Quote Icon -->
+            <symbol id="icon-quote" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" />
+            </symbol>
+        </defs>
+    </svg>
+
+    <!-- Hypnotic Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-scene">
+            <div class="preloader-tunnel">
+                <div class="tunnel-ring"></div>
+                <div class="tunnel-ring"></div>
+                <div class="tunnel-ring"></div>
+                <div class="tunnel-ring"></div>
+            </div>
+            <p class="preloader-text">Entering the tunnel...</p>
+            <p class="preloader-subtext">Breathe. Let go.</p>
+        </div>
+    </div>
+
+    <!-- Floating Navigation -->
+    <nav class="floating-nav" id="floatingNav">
+        <div class="nav-glass">
+            <a href="#hero" class="nav-link active" data-section="hero">
+                <svg class="nav-icon">
+                    <use href="#icon-home" />
+                </svg>
+                <span>Begin</span>
+            </a>
+            <a href="#story" class="nav-link" data-section="story">
+                <svg class="nav-icon">
+                    <use href="#icon-story" />
+                </svg>
+                <span>Story</span>
+            </a>
+            <a href="#philosophy" class="nav-link" data-section="philosophy">
+                <svg class="nav-icon">
+                    <use href="#icon-mind" />
+                </svg>
+                <span>Mind</span>
+            </a>
+            <a href="#projects" class="nav-link" data-section="projects">
+                <svg class="nav-icon">
+                    <use href="#icon-build" />
+                </svg>
+                <span>Build</span>
+            </a>
+            <a href="#connect" class="nav-link" data-section="connect">
+                <svg class="nav-icon">
+                    <use href="#icon-connect" />
+                </svg>
+                <span>Connect</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- ===== CHAPTER 1: THE HOOK ===== -->
+    <section class="section hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="hero-pattern"></div>
+        </div>
+
+        <div class="hero-content">
+            <p class="hero-whisper reveal-animate" data-delay="0">STOP.</p>
+            <p class="hero-hook reveal-animate" data-delay="1">Before you scroll, answer this:</p>
+            <h1 class="hero-statement reveal-animate" data-delay="2">Are you <span class="gradient-text">building</span>
+                or just <span class="gradient-text">existing</span>?</h1>
+            <p class="hero-subtext reveal-animate" data-delay="3">This is not a website. This is a mirror for your
+                ambitions.</p>
+
+            <div class="hero-cta reveal-animate" data-delay="4">
+                <a href="#reveal" class="cta-btn primary">Discover My Journey</a>
+                <a href="https://github.com/vishwakarmaindustriesabhishek-in" class="cta-btn secondary" target="_blank"
+                    rel="noopener">
+                    <svg class="cta-icon">
+                        <use href="#icon-github" />
+                    </svg>
+                    <span>View GitHub</span>
+                </a>
+            </div>
+
+            <div class="hero-scroll reveal-animate" data-delay="5">
+                <svg class="scroll-icon">
+                    <use href="#icon-arrow-down" />
+                </svg>
+            </div>
+        </div>
+
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </section>
+
+    <!-- ===== CHAPTER 2: THE REVEAL ===== -->
+    <section class="section reveal-section" id="reveal">
+        <div class="reveal-container">
+            <div class="avatar-wrapper reveal-animate">
+                <div class="avatar-glow"></div>
+                <img src="assets/avatar.png" alt="Abhishek Avatar" class="avatar-img">
+                <img src="assets/Abhishek-1.jpeg" alt="Abhishek Vishwakarma" class="real-photo">
+                <p class="hover-hint">hover to see the real me</p>
+            </div>
+            <div class="reveal-info reveal-animate">
+                <span class="label-tag">The Architect</span>
+                <h2 class="reveal-name">Abhishek Vishwakarma</h2>
+                <p class="reveal-title">Builder • Visionary • Revolutionary</p>
+                <p class="reveal-age">16 years old. From a village nobody knows.</p>
+                <p class="reveal-quote">"Change your mind today, and you change the world you see tomorrow."</p>
+            </div>
+
+            <div class="stats-bar reveal-animate">
+                <div class="stat">
+                    <span class="stat-number">5+</span>
+                    <span class="stat-label">Major Projects</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">Technologies</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">∞</span>
+                    <span class="stat-label">Determination</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CHAPTER 3: PAIN BONDING ===== -->
+    <section class="section story-section" id="story">
+        <div class="section-header reveal-animate">
+            <span class="section-label">The Roots</span>
+            <h2 class="section-title">Where I Come From</h2>
+        </div>
+
+        <div class="story-timeline">
+            <div class="timeline-block reveal-animate">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content glass-card">
+                    <span class="timeline-date">January 29, 2009</span>
+                    <h3>Birai Khurd, Gorakhpur</h3>
+                    <p>I was born in a village so small, it barely appears on maps. Where the roads turn to mud when it
+                        rains. Where electricity is a fickle friend.</p>
+                    <p class="story-whisper">Statistics said I would become another forgotten face.</p>
+                    <p class="story-highlight">But statistics don't account for the fire that burns in certain souls.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-block reveal-animate">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content glass-card">
+                    <span class="timeline-date">The Foundation</span>
+                    <h3>My Parents</h3>
+                    <p><strong>Ramsahai Vishwakarma</strong> — my father. His hands were rough from labor, his back bent
+                        from years of carrying burdens. He never told me he loved me in words. But he showed it in every
+                        sacrifice.</p>
+                    <p><strong>Lalita Devi</strong> — my mother. Her faith in me was so absolute that it became my
+                        foundation.</p>
+                </div>
+            </div>
+
+            <div class="timeline-block reveal-animate highlight-block">
+                <div class="timeline-marker pulse-marker"></div>
+                <div class="timeline-content glass-card pain-card">
+                    <span class="timeline-date">October 6, 2025</span>
+                    <h3>The Day the World Went Dark</h3>
+                    <p>The day my father died.</p>
+                    <p class="story-whisper">I cannot write these words without my hands trembling.</p>
+                    <div class="pain-quote">
+                        <svg class="quote-icon">
+                            <use href="#icon-quote" />
+                        </svg>
+                        <p>"Time is the only non-renewable resource. Legacy is what outlasts you."</p>
+                    </div>
+                    <p class="promise-text"><em>I made a promise: I would not simply survive. I would build.</em></p>
+                </div>
+            </div>
+
+            <div class="timeline-block reveal-animate">
+                <div class="timeline-marker glow-marker"></div>
+                <div class="timeline-content glass-card awakening-card">
+                    <span class="timeline-date">2022 — Age 13</span>
+                    <h3>The First Line of Code</h3>
+                    <p>An old salvaged computer. Its screen flickered with uncertainty. But to me, it was a portal to
+                        infinite possibility.</p>
+                    <code class="code-display">printf("Hello, World!");</code>
+                    <p class="story-highlight">In that moment, I understood: technology is not something we use—it is
+                        something we shape.</p>
+                </div>
+            </div>
+
+            <div class="timeline-block reveal-animate">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content glass-card">
+                    <span class="timeline-date">2022 — Present</span>
+                    <h3>Self-Education</h3>
+                    <p>No coding bootcamps. No hackathons. No mentors at the next desk. Just me, a computer, and
+                        determination.</p>
+                    <div class="skills-flow">
+                        <span class="skill-tag">C/C++</span>
+                        <span class="skill-tag">Go</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Kotlin</span>
+                        <span class="skill-tag">Dart</span>
+                    </div>
+                    <p class="story-highlight">Isolation showed me that I could stand alone. And once you know you can
+                        stand alone, you're never truly powerless again.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CHAPTER 4: MIRROR EFFECT ===== -->
+    <section class="section mirror-section" id="mirror">
+        <div class="mirror-container">
+            <p class="mirror-intro reveal-animate">Now... a moment for you.</p>
+
+            <div class="mirror-questions">
+                <div class="mirror-question-block reveal-animate">
+                    <p class="mirror-question">"When was the last time you felt lost but didn't quit?"</p>
+                </div>
+                <div class="mirror-question-block reveal-animate">
+                    <p class="mirror-question">"What did your pain make you become?"</p>
+                </div>
+                <div class="mirror-question-block reveal-animate">
+                    <p class="mirror-question">"Are you building something meaningful... or just existing?"</p>
+                </div>
+            </div>
+
+            <div class="mirror-pause reveal-animate">
+                <p>Take a breath.</p>
+            </div>
+
+            <p class="mirror-note reveal-animate">If these questions hit home — you and I already understand each other.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== CHAPTER 5: IDENTITY ACTIVATION ===== -->
+    <section class="section identity-section" id="identity">
+        <div class="identity-container">
+            <h2 class="identity-title reveal-animate">Who are you?</h2>
+            <p class="identity-subtitle reveal-animate">Choose your nature. There is no wrong answer.</p>
+
+            <div class="identity-choices reveal-animate">
+                <button class="identity-btn" data-type="builder">
+                    <svg class="identity-icon">
+                        <use href="#icon-builder" />
+                    </svg>
+                    <span class="btn-label">Builder</span>
+                    <span class="btn-desc">You create. You construct. You make dreams physical.</span>
+                </button>
+                <button class="identity-btn" data-type="dreamer">
+                    <svg class="identity-icon">
+                        <use href="#icon-dreamer" />
+                    </svg>
+                    <span class="btn-label">Dreamer</span>
+                    <span class="btn-desc">You imagine. You envision. You see what others can't.</span>
+                </button>
+                <button class="identity-btn" data-type="observer">
+                    <svg class="identity-icon">
+                        <use href="#icon-observer" />
+                    </svg>
+                    <span class="btn-label">Observer</span>
+                    <span class="btn-desc">You watch. You understand. You move when the time is right.</span>
+                </button>
+            </div>
+
+            <div class="identity-result" id="identityResult">
+                <p class="result-text" id="resultText"></p>
+                <p class="result-follow" id="resultFollow"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CHAPTER 6: PHILOSOPHY ===== -->
+    <section class="section philosophy-section" id="philosophy">
+        <div class="section-header reveal-animate">
+            <span class="section-label">The Philosophy</span>
+            <h2 class="section-title">What I Believe</h2>
+        </div>
+
+        <div class="philosophy-grid">
+            <div class="philosophy-card glass-card reveal-animate">
+                <h3>Freedom Through Technology</h3>
+                <p>"When information is free, minds can be free. When tools are accessible, creation is democratized."
+                </p>
+                <span class="philosophy-tag">Core Thesis</span>
+            </div>
+
+            <div class="philosophy-card glass-card reveal-animate">
+                <h3>Reality is Plastic</h3>
+                <p>"The limits we experience are mostly limits we accept. The impossibilities we face are often just
+                    lack of imagination."</p>
+                <span class="philosophy-tag">Perception</span>
+            </div>
+
+            <div class="philosophy-card glass-card reveal-animate">
+                <h3>Revolution Starts Within</h3>
+                <p>"Real revolution starts in the mind of a single person who decides that the current reality is
+                    unacceptable."</p>
+                <span class="philosophy-tag">Transformation</span>
+            </div>
+
+            <div class="philosophy-card glass-card reveal-animate">
+                <h3>Vulnerability is Power</h3>
+                <p>"I have cried. Many times. Vulnerability is not weakness—it's the price of caring deeply."</p>
+                <span class="philosophy-tag">Humanity</span>
+            </div>
+
+            <div class="philosophy-card glass-card reveal-animate">
+                <h3>Constraint is Innovation</h3>
+                <p>"When you can't brute-force with resources, you solve with intelligence."</p>
+                <span class="philosophy-tag">Creation</span>
+            </div>
+
+            <div class="philosophy-card glass-card reveal-animate">
+                <h3>Persistence Beats Talent</h3>
+                <p>"In the long run, persistence beats talent that gives up."</p>
+                <span class="philosophy-tag">Endurance</span>
+            </div>
+        </div>
+
+        <div class="wisdom-flow reveal-animate">
+            <div class="wisdom-line">
+                <p class="wisdom-quote">"Technology is not power. Awareness is."</p>
+            </div>
+            <div class="wisdom-line">
+                <p class="wisdom-quote">"I did not inherit technology; I broke into its citadel."</p>
+            </div>
+            <div class="wisdom-line">
+                <p class="wisdom-quote">"The impossible is often just the unexplored."</p>
+            </div>
+            <div class="wisdom-line">
+                <p class="wisdom-quote">"Fear is information, not instruction."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CHAPTER 7: LESSONS FROM GIANTS ===== -->
+    <section class="section lessons-section" id="lessons">
+        <div class="section-header reveal-animate">
+            <span class="section-label">The Teachers</span>
+            <h2 class="section-title">What Giants Taught Me</h2>
+        </div>
+
+        <div class="lessons-grid">
+            <div class="lesson-card glass-card reveal-animate">
+                <div class="lesson-avatar">
+                    <img src="assets/gandhi.png" alt="Gandhi" class="lesson-img">
+                </div>
+                <h3>Gandhi</h3>
+                <p>"Self-transformation precedes world transformation. Start where you are. Build better systems."</p>
+            </div>
+            <div class="lesson-card glass-card reveal-animate">
+                <div class="lesson-avatar">
+                    <img src="assets/einstein.png" alt="Einstein" class="lesson-img">
+                </div>
+                <h3>Einstein</h3>
+                <p>"Imagination trumps resources. Question assumptions. Simplicity is the ultimate sophistication."</p>
+            </div>
+            <div class="lesson-card glass-card reveal-animate">
+                <div class="lesson-avatar">
+                    <img src="assets/father.png" alt="My Father" class="lesson-img">
+                </div>
+                <h3>My Father</h3>
+                <p>"Dignity in struggle. Sacrifice without expectation. Actions over words. Love without words."</p>
+            </div>
+            <div class="lesson-card glass-card reveal-animate">
+                <div class="lesson-avatar">
+                    <img src="assets/mother.png" alt="My Mother" class="lesson-img">
+                </div>
+                <h3>My Mother</h3>
+                <p>"Faith that moves mountains. Strength in softness. Resilience in loss. Hope against all odds."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CHAPTER 8: PROJECTS ===== -->
+    <section class="section projects-section" id="projects">
+        <div class="section-header reveal-animate">
+            <span class="section-label">The Work</span>
+            <h2 class="section-title">What I Build</h2>
+            <p class="section-subtitle">Not products. Philosophies made executable.</p>
+        </div>
+
+        <div class="projects-showcase">
+            <div class="project-card glass-card reveal-animate">
+                <div class="project-icon">
+                    <svg>
+                        <use href="#icon-ai" />
+                    </svg>
+                </div>
+                <div class="project-header">
+                    <h3 class="project-name">NeuroX & Vishwakarma AI</h3>
+                    <span class="project-badge">AI</span>
+                </div>
+                <p class="project-question">"What if AI could understand not just words, but the silence between them?"
+                </p>
+                <p class="project-desc">AI systems built in a village room. Innovation doesn't require permission.</p>
+            </div>
+
+            <div class="project-card glass-card reveal-animate">
+                <div class="project-icon">
+                    <svg>
+                        <use href="#icon-search" />
+                    </svg>
+                </div>
+                <div class="project-header">
+                    <h3 class="project-name">Vishwakarma Express</h3>
+                    <span class="project-badge">Search</span>
+                </div>
+                <p class="project-question">"The internet is drowning in information but starving for truth."</p>
+                <p class="project-desc">A search engine that prioritizes relevance over revenue.</p>
+            </div>
+
+            <div class="project-card glass-card reveal-animate">
+                <div class="project-icon">
+                    <svg>
+                        <use href="#icon-shield" />
+                    </svg>
+                </div>
+                <div class="project-header">
+                    <h3 class="project-name">vOrbit Browser</h3>
+                    <span class="project-badge">Privacy</span>
+                </div>
+                <p class="project-question">"Privacy is not a feature—it's a fundamental right."</p>
+                <p class="project-desc">A browser that serves the navigator, not the tracker.</p>
+            </div>
+
+            <div class="project-card glass-card reveal-animate">
+                <div class="project-icon">
+                    <svg>
+                        <use href="#icon-server" />
+                    </svg>
+                </div>
+                <div class="project-header">
+                    <h3 class="project-name">NeuroX OS & Vishwakarma OS</h3>
+                    <span class="project-badge">OS</span>
+                </div>
+                <p class="project-question">"To build an operating system is to define the laws of a digital universe."
+                </p>
+                <p class="project-desc">Proof that a teenager can define his own reality.</p>
+            </div>
+
+            <div class="project-card glass-card reveal-animate">
+                <div class="project-icon">
+                    <svg>
+                        <use href="#icon-robot" />
+                    </svg>
+                </div>
+                <div class="project-header">
+                    <h3 class="project-name">NeuroX & Vishwakarma Robot</h3>
+                    <span class="project-badge">Robotics</span>
+                </div>
+                <p class="project-question">"Code manifest as motion. The closest I've felt to magic."</p>
+                <p class="project-desc">Built with salvaged parts and pure determination.</p>
+            </div>
+        </div>
+
+        <div class="projects-statement reveal-animate">
+            <p class="statement-text">All built in a village room.</p>
+            <p class="statement-text">No funding. No team. Zero budget.</p>
+            <p class="statement-highlight">Just vision and the refusal to quit.</p>
+        </div>
+    </section>
+
+    <!-- ===== CHAPTER 9: THE VISION ===== -->
+    <section class="section vision-section" id="vision">
+        <div class="vision-container">
+            <h2 class="vision-title reveal-animate">The World I'm Building</h2>
+
+            <div class="vision-statements">
+                <p class="vision-statement reveal-animate">A world where technology <span
+                        class="vision-highlight">liberates</span> rather than enslaves.</p>
+                <p class="vision-statement reveal-animate">Where a child in rural India has the same access as a student
+                    at MIT.</p>
+                <p class="vision-statement reveal-animate">Where privacy is protected by <span
+                        class="vision-highlight">architecture</span>, not policy.</p>
+                <p class="vision-statement reveal-animate">Where power is <span
+                        class="vision-highlight">distributed</span>, not concentrated.</p>
+            </div>
+
+            <div class="vision-call reveal-animate">
+                <p class="call-text">"This is not idealism. This is pragmatic necessity."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CHAPTER 10: THE CONNECTION ===== -->
+    <section class="section connect-section" id="connect">
+        <div class="connect-container">
+            <div class="connect-photo reveal-animate">
+                <img src="assets/Abhishek-2.jpeg" alt="Abhishek Vishwakarma" class="connect-img">
+                <div class="photo-ring"></div>
+                <div class="photo-ring ring-2"></div>
+            </div>
+
+            <div class="connect-content">
+                <p class="connect-statement reveal-animate">I am building something meaningful.</p>
+                <p class="connect-invite reveal-animate">If it resonates, walk with me.</p>
+                <p class="connect-whisper reveal-animate">Not as a follower. As a fellow builder.</p>
+
+                <div class="social-links reveal-animate">
+                    <a href="https://github.com/vishwakarmaindustriesabhishek-in" class="social-btn" target="_blank"
+                        rel="noopener">
+                        <svg class="social-icon">
+                            <use href="#icon-github" />
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/abhishek-vishwakarma-b82a22330/" class="social-btn"
+                        target="_blank" rel="noopener">
+                        <svg class="social-icon">
+                            <use href="#icon-linkedin" />
+                        </svg>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="mailto:abhishekvishwakarma8630@gmail.com" class="social-btn">
+                        <svg class="social-icon">
+                            <use href="#icon-email" />
+                        </svg>
+                        <span>Email</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CHAPTER 11: THE EXIT ===== -->
+    <section class="section exit-section" id="exit">
+        <div class="exit-container">
+            <p class="exit-text reveal-animate">Not everyone will understand this.</p>
+            <p class="exit-text dim reveal-animate">That's okay.</p>
+
+            <div class="exit-spacer"></div>
+
+            <p class="exit-whisper reveal-animate">This is for those who felt something.</p>
+
+            <div class="exit-spacer"></div>
+
+            <h2 class="exit-name reveal-animate">I am Abhishek Vishwakarma.</h2>
+            <p class="exit-tagline reveal-animate">And I am just getting started.</p>
+
+            <div class="exit-signature reveal-animate">
+                <span>Revolt. Rebuild. Reimagine.</span>
+            </div>
+
+            <div class="exit-origin reveal-animate">
+                <p>Birai Khurd, Uruwa Bazar, Gorakhpur</p>
+                <p>PIN 273407</p>
+            </div>
+
+            <div class="exit-final reveal-animate">
+                <p class="final-question">What will you build?</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 Abhishek Vishwakarma. Built with determination.</p>
+        <p class="footer-quote">"The revolution has already begun."</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
